@@ -18,7 +18,7 @@ namespace TyuiuNikolaevaANSprint1Task3Test
 			int c;
 
 			// run
-			c = date->LogicLong(a);
+			c = date->Uslovie(a);
 
 			// Valid
 			Assert::AreEqual(4000, c);

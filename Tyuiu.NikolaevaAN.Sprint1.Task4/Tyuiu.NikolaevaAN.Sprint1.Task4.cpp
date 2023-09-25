@@ -1,37 +1,27 @@
-﻿// Tyuiu.NikolaevaAN.Sprint1.Task3.cpp : This file contains the 'main' function. Program execution begins and ends there.
+﻿// Tyuiu.NikolaevaAN.Sprint1.Task4.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
-#include "../Tyuiu.NikolaevaAN.Sprint1.Task3.Lib/Tyuiu.NikolaevaAN.Sprint1.Task3.Lib.cpp"
-
+#include "../Tyuiu.NikolaevaAN.Sprint1.Task4.Lib/Tyuiu.NikolaevaAN.Sprint1.Task4.Lib.cpp"
 using namespace std;
 int main()
 {
     setlocale(LC_ALL, "Russian");
     cout << "Николаева\a\t" << "Александра\t" << "Николаевна\n";
     cout << endl;
-    cout << "Task3\n" << endl;
-    cout << "Введите четырёхзначное число: ";
-    int a;
-    cin >> a;
+    cout << "Task4\n" << endl;
+    cout << "Введите число x: ";
+    float x;
+    cin >> x;
     cout << endl;
 
-    ISprint1Task3* date = new ISprint1Task3();
-    if (date->Uslovie(a) % 2 == 0)
-    {
-        if ((date->Uslovie(a) != 1000) and (date->Uslovie(a) % 4 == 0))
-        {
-            cout << date->Uslovie(a) * 2;
-        }
-        else
-        {
-            cout << date->Uslovie(a) / 5;
-        }
-    }
+    ISprint1Task4V1* date = new ISprint1Task4V1();
+    if (x > 0 and x != 8)
+        cout << "y = " << 1 - 3 * (date->Vibor(x));
+    else if (x <= 1)
+        cout << "y = " << date->Vibor(x) * date->Vibor(x) - sin(date->Vibor(x));
     else
-    {
-        cout << "Число нечётное";
-    }
+        cout << "y = " << cos(date->Vibor(x));
     cout << endl;
 }
 
